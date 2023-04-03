@@ -1,0 +1,159 @@
+:root {
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --bg-main: hsl(217, 54%, 11%);
+  --bg-card: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* --- CSS RESET --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+/* --- BODY ---  */
+body {
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--bg-main);
+}
+
+.main__container {
+  border-radius: 18px;
+  background-color: var(--bg-card);
+}
+.main__content {
+  padding: 24px;
+  max-width: 327px;
+}
+.image__container {
+  background: url("./images/image-equilibrium.jpg");
+  background-size: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.image-view {
+  height: 100%;
+  background-color: rgba(2, 252, 252, 0.4);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0;
+}
+.image-view img {
+  width: 35px;
+}
+.image-view:hover {
+  opacity: 1;
+}
+
+.image__container img.product {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image__container img.product:hover {
+  display: none;
+}
+.view-container {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 252, 252, 0.4);
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+}
+
+.text__container h1 {
+  color: var(--white);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 28px;
+  margin-top: 24px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.text__container p {
+  color: var(--softBlue);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 12px;
+  width: 24ch;
+}
+.value__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.crypto-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  color: var(--cyan);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.days-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  color: var(--softBlue);
+  font-size: 1.6rem;
+}
+hr {
+  margin-top: 18px;
+  border-style: solid;
+  border-color: var(--line);
+}
+.social__content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+.social img {
+  width: 30px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+.social__content p {
+  color: var(--softBlue);
+  font-size: 1.6rem;
+  line-height: 26px;
+}
+.social__content p span {
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.text__container h1:hover,
+.social__content p span:hover {
+  color: var(--cyan);
+}
